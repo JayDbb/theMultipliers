@@ -1,0 +1,877 @@
+::root {
+  --pri:#201F2D;
+  --sec: #f4b27d;
+  --ter: #FE9F53;
+}
+
+
+/* Import Custom Font */
+@font-face {
+  font-family: "Euclid";
+  src: url("assets/Euclid Circular A Bold.ttf");
+}
+
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #E84855;
+  }
+  to {
+    text-shadow: 0 0 10px #f9828c;
+  }
+}
+
+@keyframes disappear {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+* {
+  font-family: "Euclid";
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  color: #FE9F53;
+  overflow-x: hidden;
+  background-color: #201F2D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #201F2D;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #37364f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+h1{
+  scale: 1.3;
+  margin-bottom: 80px;
+}
+
+input, select{
+  border-radius: 2px;
+  height: 20px;
+  border: none;
+  background-color:#f4b27d;
+  color: white;
+}
+
+table{
+  border: 2px solid #FE9F53;
+  border-collapse: collapse;
+  border-radius: 4px;
+}
+th, td{
+  /* background-color: #a87a53; */
+  /* border: 1px solid #FE9F53; */
+  text-align: center;
+  padding: 15px;
+  margin-right: 10px;
+}
+
+
+input:disabled{
+  transition: none;
+  background-color: #a87a53;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button{
+  border-radius: 2px;
+  border: none;
+  background-color:#f4b27d;
+  color: white;
+  scale: 1.1;
+  width: auto;
+  height: auto;
+  margin-top: 15px;
+  padding: 4px;
+  transition: all 1s;
+}
+
+#showPercentage #title{
+  color: white;
+  padding: 0;
+  scale:1.2;
+  width: auto;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+/* #personalStats #title{
+  margin-top: 40vh;
+} */
+
+#personalStats #header{
+  position: fixed;
+  margin-right: -100px;
+
+  width: 90vw;
+}
+#personalStats #header > button{
+  height: 50px;
+  border-radius: 4px;
+}
+
+#showPercentage{
+  margin-top: 40vh;
+  /* position: fixed; */
+}
+
+#statsTable{
+  overflow-y: scroll;
+
+  
+}
+
+
+.statsbk-btn{
+  margin: 0;
+  background-color: #201F2D;
+  color: #ffffff;
+  scale: 1.3;
+  height: 30px;
+}
+
+
+#correct{
+  animation: glowCorr 1s ease-in infinite both;
+}
+
+#showcharts{
+  /* border: 4px solid #FE9F53; */
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 200px;
+  
+  /* position: ; */
+}
+.gradesChart{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#showcharts table{
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+
+#bk-btn{
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+#bk-btn > button{
+  margin: 100px;
+  margin-bottom: 80vh;
+}
+
+#theGame{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  
+}
+
+#theGame button{
+  scale: 2;
+  margin: 0px 100px 100px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+#theGame #answerSection> button{
+  scale: 1.5;
+  margin: 0px 100px 100px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+#header{
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  margin-top: -80px;
+}
+
+#score{
+  display: flex;
+  margin-left: 100px;
+
+}
+#highscore > button{
+  margin: 0;
+  margin-left: 10px;
+  position: relative;
+  scale:1.3;
+}
+
+#score > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+
+  
+}
+
+#highscore{
+  margin-right: 100px;
+
+}
+
+#theGame input{
+  scale: 2;
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  background-color: #201F2D;
+  border: 2px solid #f4b27d ;
+  text-align: center;
+}
+
+#theGame #theQuestion >div{
+  display: flex;
+  flex-direction: row;
+}
+
+#theGame #theQuestion{
+  display: flex;
+  position: relative;
+  z-index: 0;
+  margin-top: -100px;
+  scale: 1.3;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title{
+  margin-bottom: 0px;
+  background-color: #FE9F53;
+  color: #fff;
+  text-align: center;
+  scale: 1;
+  width: 200px;
+}
+#theGame h1{
+  scale: 1.5;
+  margin: 80px;
+  width: auto;
+  color: #fff;
+}
+
+
+h5{
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  color: #E84855;
+  transition: all .7s;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+#errorsReg{
+  margin: 0px;
+
+}
+
+#correct{
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  color: #8de848;
+  transition: all .7s;
+}
+
+button:disabled{
+  background-color: #a87a53;
+}
+
+button:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+  background-color: #FE9F53;
+}
+
+img{
+  margin: 0px;
+  margin-bottom: -2px;
+  margin-right: 5px;
+}
+
+#container-1 > div > img{
+  width: 50vw;
+  height: 80vh;
+  opacity: .6;
+  margin-right: -10vw;
+}
+
+#theX{
+  margin-bottom: 0px;
+  margin-top: -10px;
+}
+
+#container-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #201F2D;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+}
+
+#submission{
+  margin-right: 10px
+}
+
+#personal-btn{
+ height:28px;
+ transition: all 1s;
+}
+
+a > #personal-btn:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+  background-color: #FE9F53;
+}
+
+#sub-container-1{
+  
+  width: 50vw;
+  height: 70vh;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+margin-top: -100px;
+}
+
+.child-con1{
+  display: flex;
+  flex-direction: column;
+  scale: 1.4;
+  align-items: baseline;
+}
+
+.child-con1 > div{
+  margin: 10px;
+}
+
+/* The Animated Operands */
+@keyframes floatingSpin {
+  0% {
+    opacity: 0;
+    rotate: 0deg;
+    bottom: 0vh;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    rotate: 360deg;
+    bottom: 290vh;
+  }
+}
+.animated-bg {
+  width: 20px;
+  height: 20px;
+  background-color: var(--second);
+  position: absolute;
+  list-style: none;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: floatingSpin 3s ease-in-out infinite both;
+  filter: invert(71%) sepia(71%) saturate(790%) hue-rotate(321deg) brightness(102%) contrast(102%);
+}
+
+#animated-container {
+  height: 100vh;
+  position: absolute;
+  top: 0vh;
+  display: flex;
+  margin-top: 0vh;
+  align-items: end;
+  z-index: 0;
+  margin-left: -90vw;
+}
+
+#animated-container > li {
+  margin-bottom: 0px;
+  
+}
+
+.animated-bg:nth-child(1) {
+  margin-left: 0vw;
+  width: 100px;
+  height: 100px;
+  animation-delay: 1s;
+  animation-duration: 5s;
+}
+
+.animated-bg:nth-child(2) {
+  margin-left: 80vw;
+  width: 120px;
+  height: 120px;
+  animation-delay: 3s;
+  animation-duration: 6s;
+}
+
+.animated-bg:nth-child(3) {
+  margin-left: 60vw;
+  width: 10px;
+  height: 10px;
+  animation-delay: 5s;
+  animation-duration: 3s;
+  border-radius: 2px;
+}
+
+.animated-bg:nth-child(4) {
+  margin-left: 40vw;
+  width: 200px;
+  height: 200px;
+  animation-delay: 3s;
+  animation-duration: 9s;
+}
+
+.animated-bg:nth-child(5) {
+  margin-left: 20vw;
+  width: 70px;
+  height: 70px;
+  animation-delay: 8s;
+  animation-duration: 4s;
+}
+
+.animated-bg:nth-child(6) {
+  margin-left: 95vw;
+  width: 50px;
+  height: 50px;
+  animation-delay: 2s;
+  animation-duration: 6s;
+}
+
+.animated-bg:nth-child(7) {
+  margin-left: 45vw;
+  width: 30px;
+  height: 30px;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+.animated-bg:nth-child(8) {
+  margin-left: 70vw;
+  width: 50px;
+  height: 50px;
+  animation-delay: 2s;
+  animation-duration: 6s;
+}
+.animated-bg:nth-child(9) {
+  margin-left: 15vw;
+  width: 100px;
+  height: 100px;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+.animated-bg:nth-child(10) {
+  margin-left: 1vw;
+  width: 80px;
+  height: 80px;
+  animation-delay: 6s;
+  animation-duration: 8s;
+}
+
+#answerLabel{
+  background-color: #201F2D;
+  position: relative;
+  z-index: 2;
+  padding: 4px;
+}
+
+@media screen and (max-width: 767px) {
+
+  *{
+    /* overflow-x: hidden; */
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  #title{
+    /* margin-top: 1000px; */
+    /* visibility: hidden; */
+  }
+
+  input, select {
+    height: 20px;
+    margin-top: 10px; 
+    margin-left: -2px;
+  }
+
+  #container-1{
+    display: flex;
+    margin-right: 150px;
+    margin-top: 100px;
+    justify-content: start;
+  }
+  button{
+    transform: scale(.7);
+  }
+
+  input[type=button]{
+    transform: scale(.7);
+    margin-left: -30px;
+
+  }
+  button:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    background-color: #FE9F53;
+  }
+
+  #svg{
+    visibility: hidden;
+  }
+  #theQuestion{
+    width: 100%;
+  }
+  #theQuestion >div{
+    transform: scale(.7);
+  }
+  #answerLabel{
+    margin-bottom: -10px;
+  }
+  #showcharts{
+    margin-top: 70vh;
+    
+    /* visibility: hidden; */
+  }
+
+  #genderBar{
+    /* display: flex; */
+    /* flex-direction: row; */
+  }
+
+  .headChart{
+    margin-top: 100vh;  
+  }
+
+  #theGame{
+    /* width: 100%; */
+    margin-left: 80px;
+  }
+
+  #highscore{
+    transform: scale(.8);
+  }
+
+  #header{
+    /* position: absolute; */
+    margin-top: -50px;
+    margin-left: -200px;
+    margin-bottom: 30px;
+    align-items: end;
+    /* margin-left: -100px; */
+
+  }
+
+  #highscorePlayer{
+    width: 1000px;
+    margin-top: -10px;
+    margin-right: -600px;
+  }
+
+  #showStats{
+    transform: scale(1);
+  }
+
+  hr{
+    background-color: #FE9F53;
+  }
+
+  .statsbk-btn{
+    width: 100px;
+    height: 50px;
+
+    margin-left: 100px;
+  }
+
+
+  #showPercentage{
+    margin-top: 0px;
+    transform: scale(.7);
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #201F2D;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #37364f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+#stats #bk-btn{
+  margin-right: 100px;
+}
+ #stats #bk-game{
+  width: 100px;
+}
+#stats #showPercentage{
+  margin-top: -120px;
+  transform: scale(.4);
+
+}
+
+#personalStats #header{
+  margin-top: -600px;
+}
+
+#personalStats #highscore{
+  margin-left: 50px;
+}
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+
+  /* h1 {
+    font-size: 24px;
+  } */
+
+  #title{
+    /* margin-top: 1000px; */
+    /* visibility: hidden; */
+    margin-top: 1000px;
+  }
+
+  #theGame #title{
+    margin-top: 0px;
+  }
+
+  input, select {
+    height: 20px;
+    margin-top: 10px; 
+    margin-left: -2px;
+  }
+
+  #container-1{
+    display: flex;
+    margin-right: 150px;
+    margin-top: 100px;
+    justify-content: start;
+  }
+  button{
+    /* transform: scale(.7); */
+  }
+  button:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    background-color: #FE9F53;
+  }
+
+  #svgDiv{
+    margin-right: 50px;
+    margin-left: 50px;
+    scale: .7;
+  }
+  #theQuestion{
+    width: 100%;
+  }
+  #theQuestion >div{
+    /* transform: scale(.7); */
+  }
+  #answerLabel{
+    margin-bottom: -10px;
+  }
+  #showcharts{
+    margin-top: 70vh;
+    
+    /* visibility: hidden; */
+  }
+
+  #genderBar{
+    /* display: flex; */
+    /* flex-direction: row; */
+  }
+
+  .headChart{
+    margin-top: 100vh;  
+  }
+
+  #theGame{
+    /* width: 100%; */
+    height: 100%;
+    margin-left: 80px;
+  }
+
+  #highscore{
+    /* transform: scale(.8); */
+    margin-left: 100px;
+  }
+
+  #header{
+    /* position: absolute; */
+    margin-top: -50px;
+    margin-left: 200px;
+    margin-right: 100px;
+    width: 100%;
+
+    /* margin-bottom: 30px; */
+    /* align-items: end; */
+    /* margin-left: -100px; */
+
+  }
+
+  #highscorePlayer{
+    width: 1000px;
+    margin-top: -10px;
+    margin-right: -600px;
+  }
+
+  #showStats{
+    width: 100px;
+    transform: scale(1.1);
+  }
+
+
+  .statsbk-btn{
+    width: 100px;
+    height: 50px;
+    margin-right: -100px;
+
+    /* padding-right: 400px; */
+  }
+
+  .statsbk-btn:hover{
+    background-color: none;
+
+    transform: none;
+  }
+
+  #showPercentage{
+    margin-top: 0px;
+    transform: scale(1);
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #201F2D;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #37364f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: pointer;
+}
+
+#stats #bk-btn{
+  margin-right: 100px;
+  /* margin-top: 910px; */
+}
+ #stats #bk-game{
+  width: 100px;
+}
+#stats #showPercentage{
+  margin-top: -920px;
+  transform: scale(.8);
+
+}
+
+#personalStats #header{
+  margin-top: -600px;
+}
+
+#personalStats #highscore{
+  margin-left: 50px;
+}
+
+#highscore{
+  margin-right: 70px;
+  margin-bottom: 80px;
+}
+
+#showcharts{
+  top:-450px;
+  left: -60px;
+  margin-bottom: 0px;
+}
+
+}

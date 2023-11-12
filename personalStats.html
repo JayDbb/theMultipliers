@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Stats</title>
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body onload="findPercentageScore()">
+    <section id="personalStats" >
+        <h1 id="title">Personal Stats</h1>
+        <div id="header">
+                <button onclick="backToRegistration()" class="statsbk-btn" style="scale: 1.2;">Back To Registration</button>
+            <div id="highscore">
+                <h3>High Score</h3>
+                <h3 id="highscorePlayer"> ???</h3>
+                <button id="showStats" onclick="showAllStats()">Check Stats</button>
+            </div>
+        </div>
+        <table id="showPercentage">
+            <tr>
+                <h1 id="title">The Multiples</h1>
+            </tr>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Amount Correct</th>
+                    <th>Amount of Questions</th>
+                    <th>Questions</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+
+        </table>
+    </section>
+    
+    <script type="text/javascript" src="game.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Game</title>
+    <link href="index.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <ul id="animated-container">
+        <li class="animated-bg"><img src="assets/division.png" /></li>
+        <li class="animated-bg"><img src="assets/times.png" /></li>
+        <li class="animated-bg"><img src="assets/division.png" /></li>
+        <li class="animated-bg"><img src="assets/times.png" /></li>
+        <li class="animated-bg"><img src="assets/plus.png" /></li>
+        <li class="animated-bg"><img src="assets/times.png" /></li>
+        <li class="animated-bg"><img src="assets/minus.png" /></li>
+        <li class="animated-bg"><img src="assets/times.png" /></li>
+        <li class="animated-bg"><img src="assets/division.png" /></li>
+        <li class="animated-bg"><img src="assets/times.png" /></li>
+        <li class="animated-bg"><img src="assets/plus.png" /></li>
+    </ul>
+    <div id="mainHolder">
+        <div id="theGame">
+            <h1 id="title">The Multiples</h1>
+            <div id="header">
+                    <button onclick="backToRegistration()" class="statsbk-btn" style="scale: 1.2;">Back To Registration</button>
+                <div id="highscore">
+                    <h3>Your High Score</h3>
+                    <h3 id="highscorePlayer"> ???</h3>
+                    <button id="showStats" onclick="showAllStats()">Check Stats</button>
+                </div>
+            </div>
+            <br>
+            
+            <div id="manageButton">
+                <!-- Task 5 -->
+                <button id="start" onclick="PlayGame()">Start</button>
+                <button id="end" onclick="endGame()">End</button>
+            </div>
+            <div id="theQuestion">
+                <div>
+                    <h1 id="num1" style="color: #FE9F53;"></h1>
+                    <h1>x</h1>
+                    <h1 id="num2" style="color: #FE9F53;"></h1>
+                </div>
+                <label id="answerLabel" style="background-color: #201F2D;position: relative;z-index: 2;padding: 4px;"> Answer</label>
+                <input id="ansInp" disabled type="number" />
+                <h5 id="errors"></h5>
+                <h5 id="correct"></h5>
+            </div>
+            <div id="answerSection">
+                <!-- Task 6 -->
+                <button id="check" disabled onclick="checkAns()">Check</button>
+                <button id="next" disabled onclick="PlayGame()">Next</button>
+            </div>
+        </div>
+    </div>
+    <div id="showcharts">
+            <div id="genderBar">
+                <table>
+                    <tr class="barChartRow">
+                        <td class="barChartData"><div id="female"></div></td>
+                        <td class="barChartData"><div id="male"></div></td>
+                    </tr>
+                    <tr class="barChartRow">
+                        <td class="barChartData headChart">Female</td>
+                        <td class="barChartData headChart">Male</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="noDataGender">No Data Avaialable</td>
+                    </tr>
+
+                </table>
+                <table>
+                    <tr >
+                        <td colspan="8" id="noDataGrade">No Data Avaialable</td>
+                    </tr>
+                    <tr class="barChartRow gradesChart">
+                        <td class="barChartData" id="50"></td>
+                        <td class="barChartData" id="50-59">50-59</td>
+                        <td class="barChartData" id="60-69">60-69</td>
+                        <td class="barChartData" id="70-79">70-79</td>
+                        <td class="barChartData" id="80-89">80-89</td>
+                        <td class="barChartData" id="90-99">90-99</td>
+                        <td class="barChartData" id="100">100</td>
+                        
+                    </tr>
+
+                </table>
+            </div> 
+    </div>
+
+    <script type="text/javascript" src="game.js"></script>
+</body>
+
+</html>
