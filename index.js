@@ -30,6 +30,13 @@ document.getElementById("dob").addEventListener("focusout", e=>{
     }
 })
 
+document.getElementById("personal-btn").addEventListener("click", ()=>{
+    document.getElementById("container-1").style.animation = "disappear 1s linear 1 both";
+    setTimeout(()=>{
+        location.href = "/personalStats.html"
+
+    }, 1000)
+})
 
 document.getElementById("email").addEventListener("focusout", e=>{
     let regEx = new RegExp("@gmail.com", "i");
