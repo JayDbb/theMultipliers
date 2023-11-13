@@ -33,7 +33,7 @@ document.getElementById("dob").addEventListener("focusout", e=>{
 document.getElementById("personal-btn").addEventListener("click", ()=>{
     document.getElementById("container-1").style.animation = "disappear 1s linear 1 both";
     setTimeout(()=>{
-        location.href = "https://jaydbb.github.io/theMultipliers/personalStats.html"
+        location.href = "/personalStats.html"
 
     }, 1000)
 })
@@ -142,7 +142,7 @@ const Register = (e)=>{
     document.getElementById("container-1").style.animation = "disappear 1s linear 1 both";
    
     setTimeout(()=>{
-        location.href = "https://jaydbb.github.io/theMultipliers/game.html"
+        location.href = "/game.html"
 
     }, 1000)
 
