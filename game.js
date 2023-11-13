@@ -260,7 +260,7 @@ const endGame = () => {
     document.querySelector("body").style.animation = "disappear 1s linear 1 both";
 
     setTimeout(() => {
-        location.href = "personalStats.html"
+        location.href = "theMultipliers/personalStats.html"
 
     }, 1000)
 }
@@ -269,7 +269,7 @@ const showAllStats = () => {
     document.querySelector("body").style.animation = "disappear 1s linear 1 both";
 
     setTimeout(() => {
-        location.href = "stats.html"
+        location.href = "theMultipliers/stats.html"
 
     }, 1000)
 
@@ -314,7 +314,7 @@ const backToRegistration = () => {
         endGame()
     }
     setTimeout(() => {
-        location.href = "index.html"
+        location.href = "theMultipliers/index.html"
 
     }, 1000)
 }
