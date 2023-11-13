@@ -54,7 +54,7 @@ document.getElementById("bk-game").addEventListener("click",()=>{
     document.querySelector("body").style.animation = "disappear 1s linear 1 both";
    
     setTimeout(()=>{
-        location.href = "/game.html"
+        location.href = "game.html"
 
     }, 1000)
 })
@@ -63,7 +63,7 @@ document.getElementById("bk-reg").addEventListener("click",()=>{
     document.querySelector("body").style.animation = "disappear 1s linear 1 both";
    
     setTimeout(()=>{
-        location.href = "/index.html"
+        location.href = "index.html"
 
     }, 1000)
 })
