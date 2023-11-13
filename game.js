@@ -315,7 +315,7 @@ const backToRegistration = () => {
     }
     setTimeout(() => {
         location.href = "https://jaydbb.github.io/theMultipliers/index.html"
-
+        alert(location.href)
     }, 1000)
 }
 
