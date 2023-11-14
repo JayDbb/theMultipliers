@@ -149,11 +149,11 @@ const checkAns = () => {
     if (scoreData) {
         
         for (data of scoreData) {
+            console.log(data)
             if (uid == data.id) {
                 currUserScores = data
             }
         }
-        
         let tempArr = []
         let found = false;
         if(!currUserScores){
@@ -164,19 +164,17 @@ const checkAns = () => {
         // console.log(currUserScores, "plot")
         for (let i = 0; i < scoreData.length; i++) {
             if(scoreData[i].inSession == "true"){
+                console.log(scoreData[i], "score data in condition")
                 tempArr.push(userTempScoreData)
                 found = true
                 continue
                 
             }
-            tempArr.push(scoreData[i])
-            
+            tempArr.push(scoreData[i])            
         }
         if(!found){
-            // console.log(data)
             tempArr.push(userTempScoreData)
         }
-            console.log(tempArr, "temo")
 
         localStorage.setItem("Score", JSON.stringify(tempArr))
     
@@ -277,10 +275,14 @@ const showAllStats = () => {
 
 
 window.addEventListener("load", () => {
+
+
     if (localStorage.getItem("fromallStats") == "true") {
         PlayGame()
         localStorage.setItem("fromallStats", "false")
     }
+
+    // alert("The ")
 
     document.querySelector("body").style.animation = "appear 1s linear 1 both";
 

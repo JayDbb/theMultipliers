@@ -81,6 +81,17 @@ h1{
   margin-bottom: 80px;
 }
 
+.h1-alike{
+  scale: 1.3;
+  margin-bottom: 80px;
+  margin-bottom: 0px;
+  background-color: #FE9F53;
+  color: #fff;
+  text-align: center;
+  scale: 1;
+  width: 200px;
+}
+
 input, select{
   border-radius: 2px;
   height: 20px;
@@ -217,7 +228,7 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-y: hidden;
   flex-direction: column;
   
 }
@@ -442,7 +453,7 @@ margin-top: -100px;
 }
 
 #animated-container {
-  height: 100vh;
+  height: 85vh;
   position: absolute;
   top: 0vh;
   display: flex;
@@ -550,6 +561,11 @@ margin-top: -100px;
 
   h1 {
     font-size: 24px;
+  }
+
+  .h1-alike{
+    font-size: 24px;
+
   }
 
   #title{
